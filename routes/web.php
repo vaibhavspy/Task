@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route::resource('task', 'TaskController');
-Route::resource('', TaskController::class);
+Route::resource('task', TaskController::class);
 Route::post('task/save', 'App\Http\Controllers\TaskController@taskSave')->name('task.save');
 
 // Route::post('task', function(){
