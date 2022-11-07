@@ -38,7 +38,8 @@
                                 </thead>
 
                                 <tbody>
-                                    {{-- @dd($details['formdata']) --}}
+                                  
+                                    @if(!empty($details['formdata']))
                                     @foreach ($details['formdata'] as $key => $data)
                                         <tr>
                                             {{-- <th scope="row">{{ $data->id }}</th> --}}
@@ -60,6 +61,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                             <form action="{{ route('task.save') }}" method="POST">
